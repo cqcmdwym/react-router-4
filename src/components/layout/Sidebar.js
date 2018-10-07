@@ -7,6 +7,7 @@ const Sidebar = () => {
         {name: 'Home', url: '/'},
         {name: 'Prompt', url: '/prompt'},
         {name: 'Prop Viewer', url: '/props'},
+        {name: 'Color', url: 'color'},
         // {name: '404 Error', url: '/404Error'},
     ];
 
