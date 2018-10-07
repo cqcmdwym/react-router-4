@@ -3,6 +3,7 @@ import Header from './components/layout/Header';
 import Sidebar from './components/layout/Sidebar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
+import NameForm from './components/prompt/NameForm';
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
                     <Route path='/foo' component={Home} /> */}
                     <Switch>
                         <Route path='/' component={Home}  exact={true} />
+                        <Route path='/prompt' component={NameForm} />
                     </Switch>
                 </div>
             </div>
