@@ -2,6 +2,8 @@ import React from 'react';
 import LoggingDefaultMessage from './LoggingDefaultMessage';
 import { Link, Route } from 'react-router-dom';
 import LoggingLink from './LoggingLink';
+import Lorem from './Lorem';
+import LoggingRoute from './LoggingRoute';
 
 const LoggingHome = ({match}) => {
     return (
@@ -13,6 +15,7 @@ const LoggingHome = ({match}) => {
                 <LoggingLink to={`${match.url}/lorem/1842a9f0-449d-499f-bd19-36105da591fa`}>Link 2</LoggingLink>
             </h4>
 
+            <LoggingRoute path={`${match.url}/lorem/:eid`} component={Lorem} />
             <Route path={`${match.url}`} component={LoggingDefaultMessage} exact />
         </div>
     );
