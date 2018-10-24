@@ -8,6 +8,10 @@ import PropViewer from './components/prompt/PropViewer';
 import PageNotFound from './components/PageNotFound';
 import ColorSwatch from './components/color/ColorSwatch';
 import LoggingHome from './components/logging/LoggingHome';
+import PrivateRoute from './components/secure/PrivateRoute';
+import ProtectedHome from './components/secure/ProtectedHome';
+import Login from './components/secure/Login';
+import Logout from './components/secure/Logout'
 
 const App = () => {
 
@@ -28,6 +32,11 @@ const App = () => {
                             return <ColorSwatch color='#ff0000' text='Red' />
                         }} />
                         <Route path='/logging' component={LoggingHome} />
+
+                        <PrivateRoute path='/private' component={ProtectedHome} />
+                        <Route path='/login' component={Login} />
+                        <Route path='/logout' component={Logout} />
+
                         <Route component={PageNotFound} />
                     </Switch>
                 </div>
